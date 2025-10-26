@@ -169,7 +169,7 @@ function PostListScreen({ navigation }) {
     }
 
     try {
-      console.log("🌐 Sincronizando con la API...");
+      console.log("Sincronizando con la API...");
       const response = await axios.get(API_URL);
       const apiPostsFormatted = response.data.map((post) => ({
         id: post.id,
@@ -216,7 +216,7 @@ function PostListScreen({ navigation }) {
       mergedPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
       await AsyncStorage.setItem(STORAGE_KEY_POSTS, JSON.stringify(mergedPosts));
       setAllPosts(mergedPosts);
-      console.log("✅ Sincronización de API completada.");
+      console.log("Sincronización de API completada.");
 
     } catch (error) {
       console.error('Error en syncApi:', error);
