@@ -61,7 +61,7 @@ function SyncProvider({ children }) {
 
       Alert.alert('Sincronizando', `Procesando ${queue.length} cambios pendientes...`);
 
-      console.log('--- INICIO DE SINCRONIZACIÓN (SIMULACIÓN) ---');
+      console.log('--- INICIO DE SINCRONIZACION ---');
       let postsNeedUpdate = false;
 
       for (const action of queue) {
